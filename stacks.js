@@ -1,9 +1,7 @@
 /*stack practice
 -create stack class (including functions push, pop)
 -create stack called starTrek and add Kirk, Spock, McCoy, Scotty
-
 -add additional helper funcs. peek(), isEmpty(), display()
-
 -remove McCoy from stack, then display stack
 */
 
@@ -37,6 +35,14 @@ class Stack{
         return this.items[this.count - 1]
     }
 
+
+    //check if stack is empty
+    isEmpty(){
+        console.log(this.count == 0 ? 'Stack is empty' : 'Stack is NOT empty')
+    
+        //returns true or false if this.count is == 0 
+        return this.count == 0
+    }
 }
 
 
@@ -45,12 +51,19 @@ class Stack{
 
 const stack = new Stack()
 
-stack.push(100)
-stack.push(200)
+stack.push("Kirk")
+stack.push("Spock")
+stack.push("McCoy")
+stack.push("Scotty")
 
 stack.peek()
 
-stack.push(300)
-
 stack.pop()
+stack.pop()
+stack.push('Scotty')
+
+stack.peek()
+
+
+stack.isEmpty()
 
